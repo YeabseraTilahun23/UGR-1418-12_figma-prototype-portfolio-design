@@ -1,0 +1,385 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: rgb(106, 255, 126);
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .search-bar {
+            margin-left: auto;
+            margin-right: 20px;
+        }
+
+        .search-bar input {
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .logo a {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #8aff00;
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a {
+            font-family: 'Raleway', sans-serif;
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #575757;
+        }
+
+        .main-content {
+            padding: 20px;
+        }
+
+        .image-carousel {
+            display: flex;
+            overflow-x: scroll;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .image-carousel img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .grid-section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .grid-section .grid-item {
+            background-color: #222;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .grid-section .grid-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .grid-section .grid-item p {
+            margin-top: 10px;
+        }
+
+        .video-section {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .video-section .video-item {
+            text-align: center;
+        }
+
+        .video-section .video-item video {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .video-section .video-item p {
+            margin-top: 10px;
+        }
+
+        .connect-button {
+            display: block;
+            text-align: center;
+            width: 30%;
+            background-color: #8aff00;
+            color: #000;
+            padding: 10px 20px;
+            margin: 0 auto 40px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        .connect-button:hover {
+            background-color: #7cd200;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer .nav-footer a {
+            color: white;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+        .footer .nav-footer a:hover {
+            text-decoration: underline;
+        }
+
+        .social-icons img {
+            width: 30px;
+            margin: 0 10px;
+            transition: transform 0.3s;
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.2);
+        }
+
+
+        @media (max-width: 1024px) {
+            .webpagenamenav {
+                display: none; /* Hide the menu by default */
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .webpagenamemenu-toggle {
+                display: block;
+                cursor: pointer;
+                font-size: 2rem;
+            }
+
+            .portfolio {
+                position: relative;
+                z-index: 2;
+            }
+
+            .webpagenamenav.active {
+                display: flex; /* Show when toggled */
+            }
+        }
+
+        /* Tablet Portrait (1024px) */
+        @media (max-width: 1024px) {
+            .webpagenamenav {
+                display: none;
+            }
+
+            .webpagenamemenu-toggle {
+                display: block;
+                cursor: pointer;
+                font-size: 2rem;
+            }
+
+            .portfolio {
+                position: relative;
+                z-index: 2;
+            }
+
+            .webpagenamenav.active {
+                display: flex;
+            }
+        }
+
+        /* Larger Tablets/Landscape (1366px) */
+        @media (max-width: 1366px) {
+            .webpagenamenav {
+                display: none;
+            }
+
+            .webpagenamemenu-toggle {
+                display: block;
+            }
+
+            .portfolio {
+                position: relative;
+                z-index: 2;
+            }
+
+            .webpagenamenav.active {
+                display: flex;
+            }
+        }
+
+        /* Mobile Portrait (700px) */
+        @media (max-width: 700px) {
+            .webpagenamenav {
+                display: none;
+            }
+
+            .webpagenamemenu-toggle {
+                display: block;
+            }
+
+            .portfolio {
+                position: relative;
+                z-index: 2;
+            }
+
+            .webpagenamenav.active {
+                display: flex;
+            }
+        }
+
+        /* Mobile Landscape (840px) */
+        @media (max-width: 840px) {
+            .webpagenamenav {
+                display: none;
+            }
+
+            .webpagenamemenu-toggle {
+                display: block;
+            }
+
+            .portfolio {
+                position: relative;
+                z-index: 2;
+            }
+
+            .webpagenamenav.active {
+                display: flex;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <a href="index.html">Home</a>
+    </div>
+    <div class="search-bar">
+        <input type="text" placeholder="Search...">
+    </div>
+    <div class="webpagenamemenu-toggle">
+        ☰
+    </div>
+    <nav class="webpagenamenav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="professional-background.html">Professional Background</a>
+        <a href="vlog.html">Blog</a>
+        <a href="connect.html">Connect</a>
+    </nav>
+</header>
+
+<div class="main-content">
+    <div class="image-carousel">
+        <img src="Web assignment/images/portfolio/21.jpg" alt="Image 1">
+        <img src="Web assignment/images/portfolio/22.jpg" alt="Image 2">
+        <img src="Web assignment/images/portfolio/26.jpg" alt="Image 3">
+        <img src="Web assignment/images/portfolio/jon-tyson-2dJatwXarDc-unsplash.jpg" alt="Image 4">
+        <img src="Web assignment/images/portfolio/mufid-majnun-lWmyvGCodTE-unsplash.jpg" alt="Image 5">
+        <img src="Web assignment/images/portfolio/philipp-deus-WF7-W7pn70Q-unsplash.jpg" alt="Image 6">
+        <img src="Web assignment/images/portfolio/21.jpg" alt="Image 7">
+    </div>
+
+    <div class="grid-section">
+        <div class="grid-item">
+            <img src="Web assignment/images/photo_2024-11-24_13-23-32.jpg" alt="Grid Image 1">
+            <p>Meskel Project</p>
+        </div>
+        <div class="grid-item">
+            <img src="Web assignment/images/photo_2024-11-24_13-24-09.jpg" alt="Grid Image 2">
+            <p>Wildlife Project</p>
+        </div>
+        <div class="grid-item">
+            <img src="Web assignment/images/photo_2024-11-24_13-24-29.jpg" alt="Grid Image 3">
+            <p>Wedding Project</p>
+        </div>
+        <div class="grid-item">
+            <img src="Web assignment/images/photo_2024-11-24_13-24-01.jpg" alt="Grid Image 4">
+            <p>Ethiopian History Project</p>
+        </div>
+        <div class="grid-item">
+            <img src="Web assignment/images/certificate.png" alt="Grid Image 5">
+            <p>Are online certificates worthy in 2024?</p>
+        </div>
+        <div class="grid-item">
+            <img src="Web assignment/images/20241102_183527.jpg" alt="Grid Image 6">
+            <p>Decorations?</p>
+        </div>
+    </div>
+
+    <div class="video-section">
+        <div class="video-item">
+            <video controls>
+                <source src="Assets/videos/coming soon.mp4" type="video/mp4">
+            </video>
+            <p>Would be uploaded soon</p>
+        </div>
+        <div class="video-item">
+            <video controls>
+                <source src="Assets/videos/coming soon.mp4" type="video/mp4">
+            </video>
+            <p>Would be uploaded soon</p>
+        </div>
+    </div>
+
+    <a href="connect.html" class="connect-button">Connect</a>
+</div>
+
+<footer>
+    <div class="nav-footer">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="professional-background.html">Professional Background</a>
+        <a href="vlog.html">Blog</a>
+        <a href="connect.html">Connect</a>
+    </div>
+    <p>&copy; 2024 Yeabsera Tilahun | All Rights Reserved</p>
+    <div class="social-icons">
+        <a href="#"><img src="Assets/Icons/instagram.jpg" alt="Instagram"></a>
+        <a href="#"><img src="Assets/Icons/linkedin.jpg" alt="LinkedIn"></a>
+        <a href="#"><img src="Assets/Icons/telegram.jpg" alt="Telegram"></a>
+    </div>
+</footer>
+<script>
+    const toggleMenu = document.querySelector('.webpagenamemenu-toggle');
+    const menu = document.querySelector('.webpagenamenav');
+
+    toggleMenu.addEventListener('click', () => {
+        menu.classList.toggle('active');
+    });
+</script>
+</body>
+</html>

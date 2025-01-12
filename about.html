@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Droid+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <div class="aboutlogo">
+        <a href="index.html">Home</a>
+    </div>
+    <div class="aboutsearch-bar">
+        <input type="text" placeholder="Search...">
+    </div>
+    <nav>
+      <button class="aboutmenu-toggle" aria-label="Toggle Menu">&#9776;</button>
+      <ul class="aboutnav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="professional-background.html">Professional Background</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="vlog.html">Vlog</a></li>
+        <li><a href="connect.html">Connect</a></li>
+    </nav>
+</header>
+
+<main class="aboutmain-content">
+    <section class="aboutintro-section">
+        <div class="aboutintro-text">
+            <h1>About Me</h1>
+            <p>My name is Yeabsera Tilahun, and I was born on June 3rd, 2003, in Addis Ababa, Ethiopia. I’m a third-year software engineering student at Addis Ababa Institute of Technology, but I’ve always enjoyed exploring new things. That’s how I got into copywriting.</p>
+            <p>I’ve always been into football and helping out at my Sunday school, where I learned a lot about teamwork and leadership. Over time, I worked on a few personal businesses, mainly in sales, and realized how important good writing can be for attracting customers.</p>
+            <p>One day, I came across a YouTube video about copywriting. It was a game-changer. I started learning more, practicing, and improving my skills. Soon, I was writing for businesses, helping them grow with words that connect and persuade.</p>
+            <p>I also spend time volunteering, tutoring kids, and helping elderly people. This has taught me how to communicate in a way that people understand and appreciate.</p>
+            <p>Today, I use what I’ve learned to help businesses grow through effective copywriting. It’s not just about writing; it’s about making messages that work.</p>
+        </div>
+        <div class="aboutintro-video">
+            <video controls>
+                <source src="Web assignment/videos/welcome.mov" type="video/mp4">
+            </video>
+        </div>
+    </section>
+
+    <section class="aboutgrid-container">
+        <div class="aboutimage-grid">
+            <img src="Web assignment/images/1.jpg" alt="Image">
+            <img src="Web assignment/images/2.jpg" alt="Image">
+            <img src="Web assignment/images/3.jpg" alt="Image">
+            <img src="Web assignment/images/4.jpg" alt="Image">
+            <img src="Web assignment/images/5.jpg" alt="Image">
+            <img src="Web assignment/images/6.jpg" alt="Image">
+            <img src="Web assignment/images/7.jpg" alt="Image">
+            <img src="Web assignment/images/8.jpg" alt="Image">
+            <img src="Web assignment/images/9.jpg" alt="Image">
+        </div>
+        <div class="aboutvideo-grid">
+            <video controls>
+                <source src="Assets/videos/coming soon.mp4" type="video/mp4">
+            </video>
+            <video controls>
+                <source src="Assets/videos/coming soon.mp4" type="video/mp4">
+            </video>
+            <video controls>
+                <source src="Assets/videos/coming soon.mp4" type="video/mp4">
+            </video>
+            <video controls>
+                <source src="Assets/videos/coming soon.mp4" type="video/mp4">
+            </video>
+        </div>
+    </section>
+
+    <a href="#connect" class="aboutconnect-button">Connect</a>
+</main>
+
+<footer class="aboutfooter">
+    <div class="aboutnav-footer">
+        <a href="index.html">Home</a>
+        <a href="professional background.html">Professional Background</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="vlog.html">Blog</a>
+        <a href="connect.html">Connect</a>
+    </div>
+    <p>&copy; 2024 Yeabsera Tilahun | All Rights Reserved</p>
+    <div class="aboutsocial-icons">
+        <a href="#"><img src="Assets/Icons/instagram.jpg" alt="Instagram"></a>
+        <a href="#"><img src="Assets/Icons/linkedin.jpg" alt="LinkedIn"></a>
+        <a href="#"><img src="Assets/Icons/telegram.jpg" alt="Telegram"></a>
+    </div>
+</footer>
+<script>
+  const menuToggle = document.querySelector('.aboutmenu-toggle');
+  const navLinks = document.querySelector('.aboutnav-links');
+
+  menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+  });
+</script>
+<script src="script.js" defer></script>
+</body>
+</html>

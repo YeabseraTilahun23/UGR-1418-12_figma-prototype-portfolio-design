@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Background</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Droid+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: rgb(106, 255, 126);
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .professional-background-logo a {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #8aff00;
+            text-decoration: none;
+        }
+
+        .professional-background-nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        .professional-background-nav a {
+            font-family: 'Raleway', sans-serif;
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .professional-background-nav a:hover {
+            background-color: #575757;
+        }
+
+        .professional-background-search-bar {
+            margin-left: auto;
+            margin-right: 20px;
+        }
+
+        .professional-background-search-bar input {
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .professional-background-menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .professional-background-menu-toggle span {
+            background-color: white;
+            height: 3px;
+            width: 25px;
+            margin: 3px 0;
+        }
+
+        .professional-background-dropdown {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: #333;
+            width: 200px;
+            z-index: 1000;
+        }
+
+        .professional-background-dropdown a {
+            padding: 10px;
+            border-bottom: 1px solid #444;
+        }
+
+        .professional-background-dropdown a:hover {
+            background-color: #575757;
+        }
+
+        @media (max-width: 1024px) {
+            .professional-background-nav {
+                display: none;
+            }
+
+            .professional-background-menu-toggle {
+                display: flex;
+            }
+
+            .professional-background-dropdown {
+                display: flex;
+            }
+        }
+
+        .professional-background-main-content {
+            padding: 20px;
+        }
+
+        .professional-background-columns {
+            display: flex;
+            gap: 20px;
+        }
+
+        .professional-background-left-column,
+        .professional-background-right-column {
+            flex: 1;
+        }
+
+        .professional-background-heading-section {
+            margin-bottom: 20px;
+        }
+
+        .professional-background-heading-section h2 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #8aff00;
+        }
+
+        .professional-background-testimonials {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .professional-background-testimonial {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            padding: 10px;
+            background-color: #222;
+            border-radius: 5px;
+        }
+
+        .professional-background-testimonial img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .professional-background-bottom-section {
+            display: flex;
+            margin-top: 40px;
+            gap: 20px;
+        }
+
+        .professional-background-bottom-section .professional-background-left-content,
+        .professional-background-bottom-section .professional-background-right-video {
+            flex: 1;
+        }
+
+        .professional-background-right-video video {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .professional-background-abilities-section {
+            margin-top: 40px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .professional-background-ability {
+            flex: 1;
+            padding: 20px;
+            background-color: #222;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .professional-background-ability h3 {
+            margin-bottom: 10px;
+            color: #8aff00;
+        }
+
+        .professional-background-connect-button {
+            display: block;
+            text-align: center;
+            width: 30%;
+            background-color: #8aff00;
+            color: #000;
+            padding: 10px 20px;
+            margin: 0 auto 40px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        .professional-background-connect-button:hover {
+            background-color: #7cd200;
+        }
+
+        .professional-background-footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .professional-background-footer .professional-background-nav-footer {
+            margin-left: 20px;
+            font-size: 0.9rem;
+        }
+
+        .professional-background-footer .professional-background-nav-footer a {
+            color: white;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+        .professional-background-footer .professional-background-nav-footer a:hover {
+            text-decoration: underline;
+        }
+
+        .professional-background-footer .professional-background-social-icons {
+            margin-right: 20px;
+        }
+
+        .professional-background-social-icons img {
+            width: 30px;
+            margin: 0 10px;
+            transition: transform 0.3s;
+        }
+
+        .professional-background-social-icons img:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="professional-background-logo">
+        <a href="index.html">Home</a>
+    </div>
+    <div class="professional-background-search-bar">
+        <input type="text" placeholder="Search...">
+    </div>
+    <div class="professional-background-menu-toggle" onclick="toggleDropdown()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <nav class="professional-background-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="vlog.html">Blog</a>
+        <a href="connect.html">Connect</a>
+    </nav>
+    <div class="professional-background-dropdown" id="dropdownMenu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="vlog.html">Blog</a>
+        <a href="connect.html">Connect</a>
+    </div>
+</header>
+
+<div class="professional-background-main-content">
+    <div class="professional-background-columns">
+        <div class="professional-background-left-column">
+            <div class="professional-background-heading-section">
+                <h2>Academics</h2>
+                <h3>Kindergarten</h3>
+                <p>Completed Kindergarten at Olive Academy with great distinction</p>
+                <h3>Primary Education</h3>
+                <p>Completed Primary Education at Olive Academy mostly standing first out of all students.</p>
+                <h3>Secondary Education-I</h3>
+                <p>Complete secondary education and scored a 4.00 GPA on national examination from Yehmdar Family School</p>
+                <h3>Secondary Education-II</h3>
+                <p>Completed grade 11th and 12th at Addis Ketema Preparatory School again with great distinction and was assigned to learn in Addis Ababa University</p>
+                <h3>Certificates</h3>
+                <p>Have several certificates from different online courses.</p>
+            </div>
+        </div>
+        <div class="professional-background-right-column">
+            <div class="professional-background-heading-section">
+                <h2>Achievements</h2>
+                <h3>Gold in Mathematics Olympiad</h3>
+                <p>Two-time Ethiopian Mathematics Olympiad Gold medal winner.</p>
+                <h3>Gold in School Competitions</h3>
+                <p>Competed and won several question and answer competitions different years for different schools</p>
+                <h3>Several podium finishes in team sports</h3>
+                <p>Been playing football for several years on the team and even lead the team as a captain to reach and win a regional final held around Kolfe Keranyo</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="professional-background-testimonials">
+        <div class="professional-background-testimonial">
+            <img src="Web assignment/web icons/people.png" alt="Testimonial 1">
+            <h3>Mr. Alemayehu Desta</h3>
+            <p>Yeabsera, what can I say about him. There are only a few kinds of him.</p>
+        </div>
+        <div class="professional-background-testimonial">
+            <img src="Web assignment/web icons/people.png" alt="Testimonial 2">
+            <h3>Ato Gebeyaw Lakew</h3>
+            <p>No one leads like him</p>
+        </div>
+    </div>
+
+    <div class="professional-background-bottom-section">
+        <div class="professional-background-left-content">
+            <h3>Additional Text Section</h3>
+            <p>More content coming soon</p>
+        </div>
+        <div class="professional-background-right-video">
+            <video controls>
+                <source src="Assets/videos/coming soon.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    <h1>What can you expect</h1>
+    <div class="professional-background-abilities-section">
+        <div class="professional-background-ability">
+            <h3>Copywriting</h3>
+            <p>Copywriting is the art of writing words that sell, helping businesses attract customers, build trust, and boost sales by creating clear and persuasive messages for ads, websites, and more.</p>
+        </div>
+        <div class="professional-background-ability">
+            <h3>Content Creation</h3>
+            <p>Content creation is the process of making useful and engaging material like blogs, videos, or social posts to attract and inform an audience, helping businesses build trust, grow their brand, and drive customer action.</p>
+          </div>
+          <div class="professional-background-ability">
+              <h3>Digital Marketing</h3>
+              <p>Digital marketing is promoting products or services online using tools like social media, email, and websites to reach the right audience, grow brand awareness, and drive sales.</p>
+          </div>
+      </div>
+      <a href="#connect" class="aboutconnect-button">Connect</a>
+      <footer class="aboutfooter">
+        <div class="aboutnav-footer">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="vlog.html">Blog</a>
+            <a href="connect.html">Connect</a>
+        </div>
+        <p>&copy; 2024 Yeabsera Tilahun | All Rights Reserved</p>
+        <div class="aboutsocial-icons">
+            <a href="#"><img src="Assets/Icons/instagram.jpg" alt="Instagram"></a>
+            <a href="#"><img src="Assets/Icons/linkedin.jpg" alt="LinkedIn"></a>
+            <a href="#"><img src="Assets/Icons/telegram.jpg" alt="Telegram"></a>
+        </div>
+    </footer>
+    <script>
+      const menuToggle = document.querySelector('.aboutmenu-toggle');
+      const navLinks = document.querySelector('.aboutnav-links');
+    
+      menuToggle.addEventListener('click', () => {
+          navLinks.classList.toggle('active');
+      });
+    </script>
+    <script src="script.js" defer></script>
+    </body>
+    </html>
